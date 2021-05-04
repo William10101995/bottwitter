@@ -12,7 +12,7 @@ T.get("account/verify_credentials", {
 });
 
 var dictionaryTweet = fs
-.readFileSync("./src/diccionarioTweet.txt", "utf8")
+.readFileSync("./diccionarioTweet.txt", "utf8")
 .split("\n");
 var random = extraFuncion.getRandomArbitrary(0, dictionaryTweet.length - 1); //Obtenemos un valor Random para buscar en el array
 var mensaje : any  = dictionaryTweet[random];
