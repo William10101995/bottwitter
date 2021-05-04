@@ -13,7 +13,7 @@ T.get("account/verify_credentials", {
 });
 
 var dictionaryWord = fs
-  .readFileSync("./src/diccionarioReply.txt", "utf8")
+  .readFileSync("../src/diccionarioReply.txt", "utf8")
   .split("\n");
 
 // Seteamos el stream y escuchamos todo lo referido a @botChaqueno
@@ -97,7 +97,7 @@ function tweetEvent(tweet: any) {
     ) {
       var appendWord = extraFuncion.union(arrayNewTwet); //Toma el texto del tweet y limpia APRENDE y/o @botChaqueno (en teoria)
       //Escribo en diccionario.txt la frase a aprender
-      fs.appendFileSync("./src/diccionarioReply.txt", appendWord + "\n");
+      fs.appendFileSync("../src/diccionarioReply.txt", appendWord + "\n");
 
       T.post("favorites/create", { id: nameID }); //Like a mencion
       //Parametros para respuesta
